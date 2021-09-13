@@ -224,13 +224,13 @@ const showProducts = (products) => {
     <img class="product-image card-img-top" src=${image}></img>
       </div>
       <div class="card-body">
-      <h3>${product.title}</h3>
-      <p class="font">${product.rating.count} person rate this product</p>
-      <p class="font">Average Rating: <b>${product.rating.rate}</b></p>
+      <h3 class="mb-3">${product.title}</h3>
+      <p class="font my-0">${product.rating.count} person rate this product</p>
+      <p class="font my-0">Average Rating: <b>${product.rating.rate}</b></p>
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button id="details-btn" class="btn btn-danger">Details</button>
+      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn">Add to cart</button>
+      <button id="details-btn" class="btn">Details</button>
       </div>
       </div>
       </div>
@@ -238,6 +238,7 @@ const showProducts = (products) => {
     document.getElementById("all-products").appendChild(div);
   }
 };
+//added products count and price update
 let count = 0;
 const addToCart = (id, price) => {
   count = count + 1;
@@ -290,6 +291,6 @@ const updateTotal = () => {
     getInputValue("price") +
     getInputValue("delivery-charge") +
     getInputValue("total-tax");
-  document.getElementById("total").innerText = grandTotal;
+  document.getElementById("total").innerText = grandTotal.toFixed(2);
 };
 loadProducts();

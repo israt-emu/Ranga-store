@@ -219,7 +219,7 @@ const showProducts = (products) => {
     div.classList.add("product");
     div.innerHTML = `
     <div class="col">
-    <div class="single-product card h-100">
+    <div class="single-product card h-100 p-3" id="single-product">
       <div>
     <img class="product-image card-img-top" src=${image}></img>
       </div>

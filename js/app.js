@@ -220,13 +220,13 @@ const showProducts = (products) => {
     div.innerHTML = `
     <div class="col">
     <div class="single-product card h-100 p-3" id="single-product">
-      <div>
+      <div class="image-div">
     <img class="product-image card-img-top" src=${image}></img>
       </div>
       <div class="card-body">
       <h3 class="mb-3">${product.title}</h3>
       <p class="font my-0">${product.rating.count} person rate this product</p>
-      <p class="font my-0">Average Rating: <b>${product.rating.rate}</b></p>
+      <p class="font my-0">Average Rating: <b>${product.rating.rate}/5</b></p>
       <p>Category: ${product.category}</p>
       <h2>Price: $ ${product.price}</h2>
       <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="btn">Add to cart</button>

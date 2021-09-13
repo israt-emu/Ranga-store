@@ -27,7 +27,11 @@ body {
   border-radius: 10px;
 }
 .product-image {
-  height: 300px;
+  height: 280px;
+}
+.image-div {
+  padding: 20px;
+  background: white;
 }
 .font {
   font-size: 18px;
